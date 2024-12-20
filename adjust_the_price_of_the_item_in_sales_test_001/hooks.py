@@ -227,3 +227,43 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+
+
+
+
+# ================================  Adding =====================================
+
+
+# app_include_css = "/assets/payment_entry_test_001/css/font_style.css"
+
+
+# override_doctype_class = {
+#     "Work Order": "payment_entry_test_001.overrides.work_order.CustomWorkOrder",
+# }
+
+
+doc_events = {
+    "Purchase Invoice": {
+        "validate": [
+            "adjust_the_price_of_the_item_in_sales_test_001.adjust_the_price_of_the_item_in_sales_test_001.adjust_the_price_of_the_item_in_sales_py.adjust_item_price_based_on_foreign_purchases_with_average_purchase_price_profit_margin",
+            # "adjust_the_price_of_the_item_in_sales_test_001.adjust_the_price_of_the_item_in_sales_test_001.adjust_the_price_of_the_item_in_sales_py.create_print_msg",
+        ],
+    },
+}
+
+
+doctype_js = {
+    "Purchase Invoice": "public/js/adjust_the_price_of_the_item_in_sales_js.js",
+}
+
+
+doctype_list_js = {
+    "Purchase Invoice": "public/js/adjust_the_price_of_the_item_in_sales_js.js",
+}
+
+# adjust_the_price_of_the_item_in_sales_test_001
+# Adjust The Price Of The Item In Sales Test 001
+# Adjust Item Price based on Foreign Purchases with Average Purchase Price profit margin
+
+fixtures = [{"dt": "Custom Field", "filters": [["module", "=", "Adjust The Price Of The Item In Sales Test 001"]]}]
